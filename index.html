@@ -8,21 +8,28 @@
       name="description"
       content="A GBP 99 clinic follow-up recovery tracker that turns missed consultations, aftercare, reviews, and repeat bookings into a daily action queue."
     >
-    <link rel="stylesheet" href="styles.css?v=4">
+    <link rel="stylesheet" href="styles.css?v=5">
   </head>
   <body>
     <main class="page">
-      <header class="topbar" aria-label="Page header">
-        <div>
-          <p class="eyebrow">Clinic follow-up recovery system</p>
-          <h1>Stop letting warm clinic clients disappear after the consultation</h1>
+      <header class="hero" aria-label="Clinic follow-up recovery tracker">
+        <img
+          class="hero-image"
+          src="assets/clinic-workflow-hero.jpg"
+          alt="Clinic team member reviewing a follow-up workflow dashboard in a private clinic reception"
+        >
+        <div class="hero-overlay">
+          <p class="eyebrow">Clinic follow-up recovery tracker</p>
+          <h1>Turn missed clinic follow-ups into today&apos;s action list</h1>
           <p class="intro">
-            The calculator is only the diagnosis. The product is a GBP 99 follow-up
-            recovery tracker: a Google Sheets or Excel system that tells your clinic
-            who to contact today, why now, what to say, and what revenue is at risk.
+            A GBP 99 Google Sheets or Excel setup for small clinics that need one clear
+            queue for consultations, aftercare, reviews, and repeat-booking reminders.
           </p>
+          <div class="hero-actions">
+            <a class="primary-button" href="#setup">See the GBP 99 setup</a>
+            <a class="secondary-button light" href="#calculator">Estimate leakage</a>
+          </div>
         </div>
-        <a class="top-action" href="#setup">Build my GBP 99 tracker</a>
       </header>
 
       <section class="story-band" aria-label="Why clinics lose follow-up revenue">
@@ -60,7 +67,63 @@
         </div>
       </section>
 
-      <section class="calculator-grid" aria-label="Revenue leak calculator">
+      <section class="pricing-band" id="setup" aria-label="Pricing and maintenance options">
+        <article class="price-card main-price">
+          <p class="eyebrow">Starter setup</p>
+          <div class="price-line">
+            <span>GBP 99</span>
+            <small>one-time setup</small>
+          </div>
+          <h2>Buy once. Use the tracker inside your own Google Sheets or Excel.</h2>
+          <ul class="check-list compact">
+            <li>Consultation, aftercare, review, and repeat-booking stages</li>
+            <li>Daily follow-up queue with overdue and value-at-risk flags</li>
+            <li>Staff owner column, simple status rules, and message prompts</li>
+            <li>One setup pass plus small corrections within 7 days</li>
+          </ul>
+        </article>
+        <article class="price-card">
+          <p class="eyebrow">Optional care</p>
+          <div class="price-line small">
+            <span>GBP 49</span>
+            <small>per month, optional</small>
+          </div>
+          <h2>Only if you want ongoing changes.</h2>
+          <p>
+            The GBP 99 setup does not require a subscription. Monthly care is for clinics
+            that want message updates, stage changes, cleanup checks, or a small monthly
+            review of the follow-up queue.
+          </p>
+        </article>
+      </section>
+
+      <section class="proof-band" aria-label="Early feedback and product clarification">
+        <div class="proof-copy">
+          <p class="eyebrow">Built from early feedback</p>
+          <h2>No fake testimonials. The offer is shaped around the questions real reviewers asked.</h2>
+          <p>
+            Before we claim customer results, the page answers the objections that came up
+            first: what is actually delivered, whether it is a one-off purchase, whether
+            it needs maintenance, and why it is better than a blank spreadsheet.
+          </p>
+        </div>
+        <div class="feedback-grid">
+          <blockquote>
+            <p>&quot;Is this a one-time GBP 99 purchase, or does it need maintenance?&quot;</p>
+            <cite>Early pricing feedback</cite>
+          </blockquote>
+          <blockquote>
+            <p>&quot;What does the product provide beyond something we could record in Excel?&quot;</p>
+            <cite>Early product feedback</cite>
+          </blockquote>
+          <blockquote>
+            <p>&quot;The story needs to show the service, not only the calculator.&quot;</p>
+            <cite>Early positioning feedback</cite>
+          </blockquote>
+        </div>
+      </section>
+
+      <section class="calculator-grid" id="calculator" aria-label="Revenue leak calculator">
         <form class="panel input-panel" id="calculatorForm">
           <div class="panel-title">
             <span class="panel-kicker">Step 1: diagnose</span>
@@ -239,23 +302,24 @@
         </section>
       </section>
 
-      <section class="service-band" id="setup" aria-label="GBP 99 setup offer">
+      <section class="service-band" id="contact" aria-label="GBP 99 setup offer">
         <div>
           <p class="eyebrow">Fixed first step</p>
           <h2>GBP 99 starter recovery tracker</h2>
           <p>
             I turn your current follow-up process into a small action system: stages,
             next-action dates, overdue flags, value-at-risk, and simple message prompts.
-            Built in Google Sheets or Excel so staff can use it without changing CRM.
+            It is a one-time setup in your own Google Sheets or Excel. Optional monthly
+            care is available only if you want ongoing changes.
           </p>
         </div>
         <div class="service-actions">
-          <a class="primary-button" id="bookSetup" href="mailto:shuowenzhang1@gmail.com?subject=GBP%2099%20starter%20recovery%20tracker&body=Hi%20Shuowen,%0A%0AI%20would%20like%20to%20discuss%20the%20GBP%2099%20starter%20recovery%20tracker.%0A%0AClinic%20name:%0AWebsite:%0AMain%20follow-up%20problem:%0ACurrent%20tool%20used%20for%20tracking:%0A%0AThanks">Start by email</a>
+          <a class="primary-button" id="bookSetup" href="mailto:shuowenzhang1@gmail.com?subject=GBP%2099%20starter%20recovery%20tracker&body=Hi%20Shuowen,%0A%0AI%20would%20like%20to%20discuss%20the%20GBP%2099%20starter%20recovery%20tracker.%0A%0AClinic%20name:%0AWebsite:%0AMain%20follow-up%20problem:%0ACurrent%20tool%20used%20for%20tracking:%0ADo%20you%20want%20one-time%20setup%20only%20or%20optional%20monthly%20care%3F:%0A%0AThanks">Start by email</a>
           <a class="secondary-button" href="mailto:shuowenzhang1@gmail.com?subject=Sample%20clinic%20recovery%20tracker&body=Hi%20Shuowen,%0A%0ACan%20you%20send%20me%20the%20sample%20clinic%20recovery%20tracker%3F%0A%0AThanks">Ask for sample tracker</a>
         </div>
       </section>
     </main>
 
-    <script src="app.js?v=3"></script>
+    <script src="app.js?v=4"></script>
   </body>
 </html>

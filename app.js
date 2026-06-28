@@ -68,7 +68,7 @@ function buildSummary(result) {
     `Possible missed repeat-booking revenue: ${formatter.format(result.lostRevenue)}`,
     `Conservative recoverable estimate with a simple tracker: ${formatter.format(result.recoverable)}`,
     "",
-    "Suggested next step: GBP 99 starter recovery tracker: daily queue, next-action dates, owners, overdue flags, value-at-risk, and message prompts."
+    "Suggested next step: GBP 99 one-time starter recovery tracker: daily queue, next-action dates, owners, overdue flags, value-at-risk, and message prompts. Optional GBP 49/month care is available only if ongoing changes are needed."
   ].join("\n");
 }
 
@@ -83,7 +83,7 @@ function update() {
   output.recoverable.textContent = formatter.format(result.recoverable);
 
   const subject = encodeURIComponent("Clinic follow-up recovery tracker diagnosis");
-  const body = encodeURIComponent(`${summary}\n\nHi Shuowen,\n\nCan we discuss this setup?`);
+  const body = encodeURIComponent(`${summary}\n\nHi Shuowen,\n\nCan we discuss the one-time setup and whether ongoing care is needed?`);
   output.mailtoResult.href = `mailto:shuowenzhang1@gmail.com?subject=${subject}&body=${body}`;
 }
 
