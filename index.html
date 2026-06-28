@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Clinic Follow-Up Revenue Leak Calculator</title>
+    <meta
+      name="description"
+      content="A lightweight calculator for clinics to estimate missed follow-up and repeat-booking revenue."
+    >
+    <link rel="stylesheet" href="styles.css?v=3">
+  </head>
+  <body>
+    <main class="page">
+      <header class="topbar" aria-label="Page header">
+        <div>
+          <p class="eyebrow">Clinic workflow mini audit</p>
+          <h1>Follow-up revenue leak calculator</h1>
+          <p class="intro">
+            Estimate how much revenue a clinic may lose when consultations, treatment plans,
+            aftercare, reviews, and repeat-booking opportunities are tracked by memory.
+          </p>
+        </div>
+        <a class="top-action" href="#setup">Book GBP 99 setup</a>
+      </header>
+
+      <section class="calculator-grid" aria-label="Revenue leak calculator">
+        <form class="panel input-panel" id="calculatorForm">
+          <div class="panel-title">
+            <span class="panel-kicker">Inputs</span>
+            <h2>Your clinic numbers</h2>
+          </div>
+
+          <label class="field">
+            <span>New enquiries per month</span>
+            <input id="enquiries" type="number" min="1" max="2000" step="1" value="80">
+          </label>
+
+          <label class="field">
+            <span>Consultation booking rate</span>
+            <div class="suffix-input">
+              <input id="bookingRate" type="number" min="1" max="100" step="1" value="55">
+              <span>%</span>
+            </div>
+          </label>
+
+          <label class="field">
+            <span>Treatment conversion rate</span>
+            <div class="suffix-input">
+              <input id="conversionRate" type="number" min="1" max="100" step="1" value="45">
+              <span>%</span>
+            </div>
+          </label>
+
+          <label class="field">
+            <span>Average treatment value</span>
+            <div class="suffix-input currency">
+              <span>GBP</span>
+              <input id="avgValue" type="number" min="20" max="10000" step="10" value="220">
+            </div>
+          </label>
+
+          <label class="field">
+            <span>Clients with repeat-booking potential</span>
+            <div class="suffix-input">
+              <input id="repeatRate" type="number" min="1" max="100" step="1" value="40">
+              <span>%</span>
+            </div>
+          </label>
+
+          <label class="field">
+            <span>Follow-ups that get missed or delayed</span>
+            <div class="suffix-input">
+              <input id="missedRate" type="number" min="1" max="100" step="1" value="35">
+              <span>%</span>
+            </div>
+          </label>
+        </form>
+
+        <section class="panel result-panel" aria-live="polite">
+          <div class="panel-title">
+            <span class="panel-kicker">Estimate</span>
+            <h2>Monthly leakage</h2>
+          </div>
+
+          <div class="headline-number">
+            <span id="lostRevenue">GBP 0</span>
+            <small>possible missed repeat-booking revenue</small>
+          </div>
+
+          <dl class="metric-list">
+            <div>
+              <dt>Consultations booked</dt>
+              <dd id="consultations">0</dd>
+            </div>
+            <div>
+              <dt>Treatments started</dt>
+              <dd id="treatments">0</dd>
+            </div>
+            <div>
+              <dt>Repeat opportunities missed</dt>
+              <dd id="missedRepeats">0</dd>
+            </div>
+            <div>
+              <dt>Recoverable with a simple tracker</dt>
+              <dd id="recoverable">GBP 0</dd>
+            </div>
+          </dl>
+
+          <div class="result-actions">
+            <button class="primary-button" type="button" id="copySummary">Copy summary</button>
+            <a class="secondary-button" id="mailtoResult" href="#setup">Email this estimate</a>
+          </div>
+
+          <p class="small-note">
+            This is an operational estimate, not financial advice. The tool runs in the browser
+            and does not store client or patient data.
+          </p>
+        </section>
+
+        <aside class="panel preview-panel">
+          <div class="panel-title">
+            <span class="panel-kicker">Deliverable</span>
+            <h2>What the GBP 99 setup turns into</h2>
+          </div>
+          <div
+            class="dashboard-preview"
+            role="img"
+            aria-label="Clinic follow-up tracker dashboard preview with enquiry, follow-up, review, and repeat-booking metrics"
+          >
+            <div class="preview-header">
+              <span>Follow-up tracker</span>
+              <strong>Week view</strong>
+            </div>
+            <div class="preview-stats">
+              <div>
+                <span>Open leads</span>
+                <strong>42</strong>
+              </div>
+              <div>
+                <span>Overdue follow-ups</span>
+                <strong>9</strong>
+              </div>
+              <div>
+                <span>Repeat queue</span>
+                <strong>18</strong>
+              </div>
+              <div>
+                <span>Review asks</span>
+                <strong>23</strong>
+              </div>
+            </div>
+            <div class="preview-table" aria-hidden="true">
+              <span>Client stage</span>
+              <span>Next action</span>
+              <span>Owner</span>
+              <span>Status</span>
+              <span>Consult booked</span>
+              <span>Send prep note</span>
+              <span>Amy</span>
+              <span class="tag ok">Today</span>
+              <span>Aftercare</span>
+              <span>Check-in message</span>
+              <span>Sam</span>
+              <span class="tag late">Overdue</span>
+              <span>Repeat booking</span>
+              <span>Offer next slot</span>
+              <span>Mia</span>
+              <span class="tag soon">Tomorrow</span>
+            </div>
+          </div>
+          <ul class="check-list">
+            <li>Enquiry and consultation tracker</li>
+            <li>Next action dates and overdue follow-ups</li>
+            <li>Review request and repeat-booking queue</li>
+            <li>Weekly dashboard in Google Sheets or Excel</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section class="service-band" id="setup" aria-label="GBP 99 setup offer">
+        <div>
+          <p class="eyebrow">Fixed first step</p>
+          <h2>GBP 99 clinic follow-up tracker setup</h2>
+          <p>
+            I turn this estimate into a lightweight tracker using your actual stages, treatment
+            categories, staff names, and follow-up rules. No CRM rebuild, no patient records,
+            just a clear operational dashboard.
+          </p>
+        </div>
+        <div class="service-actions">
+          <a class="primary-button" id="bookSetup" href="mailto:shuowenzhang1@gmail.com?subject=Clinic%20follow-up%20tracker%20setup&body=Hi%20Shuowen,%0A%0AI%20would%20like%20to%20discuss%20the%20GBP%2099%20clinic%20follow-up%20tracker%20setup.%0A%0AClinic%20name:%0AWebsite:%0AMain%20follow-up%20problem:%0A%0AThanks">Start by email</a>
+          <a class="secondary-button" href="mailto:shuowenzhang1@gmail.com?subject=Sample%20clinic%20follow-up%20tracker&body=Hi%20Shuowen,%0A%0ACan%20you%20send%20me%20the%20sample%20clinic%20follow-up%20tracker%3F%0A%0AThanks">Ask for sample tracker</a>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js?v=2"></script>
+  </body>
+</html>
