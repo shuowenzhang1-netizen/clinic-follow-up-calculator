@@ -74,6 +74,73 @@ h2 {
   line-height: 1.55;
 }
 
+.story-band {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 18px;
+  align-items: stretch;
+  margin-bottom: 18px;
+}
+
+.story-copy,
+.story-steps article {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.story-copy {
+  padding: 22px;
+}
+
+.story-copy h2 {
+  max-width: 540px;
+  font-size: 1.7rem;
+}
+
+.story-copy p:not(.eyebrow) {
+  margin: 16px 0 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.story-steps {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.story-steps article {
+  min-height: 152px;
+  padding: 16px;
+}
+
+.story-steps span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  color: #ffffff;
+  background: var(--teal);
+  font-weight: 900;
+}
+
+.story-steps strong {
+  display: block;
+  margin-top: 12px;
+  font-size: 1rem;
+}
+
+.story-steps p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
 .top-action,
 .primary-button,
 .secondary-button {
@@ -402,6 +469,39 @@ button.primary-button {
   font-weight: 800;
 }
 
+.difference-panel {
+  grid-column: 1 / -1;
+  padding-bottom: 20px;
+}
+
+.difference-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin: 18px 20px 0;
+}
+
+.difference-grid div {
+  min-height: 150px;
+  padding: 16px;
+  border: 1px solid #dbe8e6;
+  border-radius: 8px;
+  background: #fbfdfc;
+}
+
+.difference-grid strong {
+  display: block;
+  color: var(--ink);
+  line-height: 1.25;
+}
+
+.difference-grid p {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
 .service-band {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
@@ -440,6 +540,7 @@ button.primary-button {
 
 @media (max-width: 900px) {
   .topbar,
+  .story-band,
   .calculator-grid,
   .service-band {
     grid-template-columns: 1fr;
@@ -451,6 +552,10 @@ button.primary-button {
   }
 
   .check-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .difference-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -467,6 +572,14 @@ button.primary-button {
 
   .calculator-grid {
     gap: 12px;
+  }
+
+  .story-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .story-copy {
+    padding: 18px;
   }
 
   .panel-title,
@@ -515,6 +628,12 @@ button.primary-button {
   }
 
   .check-list {
+    grid-template-columns: 1fr;
+    margin-left: 14px;
+    margin-right: 14px;
+  }
+
+  .difference-grid {
     grid-template-columns: 1fr;
     margin-left: 14px;
     margin-right: 14px;

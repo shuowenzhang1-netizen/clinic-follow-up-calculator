@@ -3,32 +3,68 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Clinic Follow-Up Revenue Leak Calculator</title>
+    <title>Clinic Follow-Up Recovery Tracker | GBP 99 Setup</title>
     <meta
       name="description"
-      content="A lightweight calculator for clinics to estimate missed follow-up and repeat-booking revenue."
+      content="A GBP 99 clinic follow-up recovery tracker that turns missed consultations, aftercare, reviews, and repeat bookings into a daily action queue."
     >
-    <link rel="stylesheet" href="styles.css?v=3">
+    <link rel="stylesheet" href="styles.css?v=4">
   </head>
   <body>
     <main class="page">
       <header class="topbar" aria-label="Page header">
         <div>
-          <p class="eyebrow">Clinic workflow mini audit</p>
-          <h1>Follow-up revenue leak calculator</h1>
+          <p class="eyebrow">Clinic follow-up recovery system</p>
+          <h1>Stop letting warm clinic clients disappear after the consultation</h1>
           <p class="intro">
-            Estimate how much revenue a clinic may lose when consultations, treatment plans,
-            aftercare, reviews, and repeat-booking opportunities are tracked by memory.
+            The calculator is only the diagnosis. The product is a GBP 99 follow-up
+            recovery tracker: a Google Sheets or Excel system that tells your clinic
+            who to contact today, why now, what to say, and what revenue is at risk.
           </p>
         </div>
-        <a class="top-action" href="#setup">Book GBP 99 setup</a>
+        <a class="top-action" href="#setup">Build my GBP 99 tracker</a>
       </header>
+
+      <section class="story-band" aria-label="Why clinics lose follow-up revenue">
+        <div class="story-copy">
+          <p class="eyebrow">The real problem</p>
+          <h2>Excel stores rows. A recovery tracker creates the next action.</h2>
+          <p>
+            Most clinics already have client information somewhere: an inbox, booking
+            system, staff notes, or a spreadsheet. The leak happens when nobody has a
+            clear daily queue for undecided clients, aftercare check-ins, review asks,
+            and repeat-booking windows.
+          </p>
+        </div>
+        <div class="story-steps" aria-label="Common follow-up gaps">
+          <article>
+            <span>1</span>
+            <strong>Consultation done</strong>
+            <p>The client says they need time, but no follow-up date is owned.</p>
+          </article>
+          <article>
+            <span>2</span>
+            <strong>Aftercare sent</strong>
+            <p>The result is good, but the check-in message is not scheduled.</p>
+          </article>
+          <article>
+            <span>3</span>
+            <strong>Review opportunity</strong>
+            <p>A happy client leaves quietly because nobody asks at the right moment.</p>
+          </article>
+          <article>
+            <span>4</span>
+            <strong>Repeat window</strong>
+            <p>The next treatment is due, but the reminder never reaches the team.</p>
+          </article>
+        </div>
+      </section>
 
       <section class="calculator-grid" aria-label="Revenue leak calculator">
         <form class="panel input-panel" id="calculatorForm">
           <div class="panel-title">
-            <span class="panel-kicker">Inputs</span>
-            <h2>Your clinic numbers</h2>
+            <span class="panel-kicker">Step 1: diagnose</span>
+            <h2>Your clinic leak estimate</h2>
           </div>
 
           <label class="field">
@@ -79,13 +115,13 @@
 
         <section class="panel result-panel" aria-live="polite">
           <div class="panel-title">
-            <span class="panel-kicker">Estimate</span>
-            <h2>Monthly leakage</h2>
+            <span class="panel-kicker">Leak diagnosis</span>
+            <h2>Revenue at risk</h2>
           </div>
 
           <div class="headline-number">
             <span id="lostRevenue">GBP 0</span>
-            <small>possible missed repeat-booking revenue</small>
+            <small>possible repeat-booking revenue sitting in missed follow-ups</small>
           </div>
 
           <dl class="metric-list">
@@ -108,7 +144,7 @@
           </dl>
 
           <div class="result-actions">
-            <button class="primary-button" type="button" id="copySummary">Copy summary</button>
+            <button class="primary-button" type="button" id="copySummary">Copy diagnosis</button>
             <a class="secondary-button" id="mailtoResult" href="#setup">Email this estimate</a>
           </div>
 
@@ -120,21 +156,21 @@
 
         <aside class="panel preview-panel">
           <div class="panel-title">
-            <span class="panel-kicker">Deliverable</span>
-            <h2>What the GBP 99 setup turns into</h2>
+            <span class="panel-kicker">Step 2: recover</span>
+            <h2>The product is the tracker, not the calculator</h2>
           </div>
           <div
             class="dashboard-preview"
-            role="img"
+            role="group"
             aria-label="Clinic follow-up tracker dashboard preview with enquiry, follow-up, review, and repeat-booking metrics"
           >
             <div class="preview-header">
-              <span>Follow-up tracker</span>
-              <strong>Week view</strong>
+              <span>Follow-up recovery tracker</span>
+              <strong>Daily queue</strong>
             </div>
             <div class="preview-stats">
               <div>
-                <span>Open leads</span>
+                <span>Contact today</span>
                 <strong>42</strong>
               </div>
               <div>
@@ -142,7 +178,7 @@
                 <strong>9</strong>
               </div>
               <div>
-                <span>Repeat queue</span>
+                <span>Repeat window</span>
                 <strong>18</strong>
               </div>
               <div>
@@ -170,31 +206,56 @@
             </div>
           </div>
           <ul class="check-list">
-            <li>Enquiry and consultation tracker</li>
-            <li>Next action dates and overdue follow-ups</li>
-            <li>Review request and repeat-booking queue</li>
-            <li>Weekly dashboard in Google Sheets or Excel</li>
+            <li>Daily follow-up queue with priority</li>
+            <li>Stage rules for consults, aftercare, reviews, and repeat bookings</li>
+            <li>Value-at-risk and overdue flags</li>
+            <li>Staff owner, message prompts, and weekly dashboard</li>
           </ul>
         </aside>
+
+        <section class="panel difference-panel" aria-label="How this is different from Excel">
+          <div class="panel-title">
+            <span class="panel-kicker">Why not just Excel?</span>
+            <h2>A blank sheet records data. This gives the team a recovery workflow.</h2>
+          </div>
+          <div class="difference-grid">
+            <div>
+              <strong>What Excel usually becomes</strong>
+              <p>Rows of names, dates, and notes that staff have to interpret manually.</p>
+            </div>
+            <div>
+              <strong>What the tracker adds</strong>
+              <p>A daily list of who to follow up, what stage they are in, and why they matter now.</p>
+            </div>
+            <div>
+              <strong>What makes it useful</strong>
+              <p>Overdue flags, next-action dates, value-at-risk, owners, and simple message prompts.</p>
+            </div>
+            <div>
+              <strong>Why clinics can adopt it</strong>
+              <p>It stays in Google Sheets or Excel, so there is no CRM rebuild or staff retraining.</p>
+            </div>
+          </div>
+        </section>
       </section>
 
       <section class="service-band" id="setup" aria-label="GBP 99 setup offer">
         <div>
           <p class="eyebrow">Fixed first step</p>
-          <h2>GBP 99 clinic follow-up tracker setup</h2>
+          <h2>GBP 99 starter recovery tracker</h2>
           <p>
-            I turn this estimate into a lightweight tracker using your actual stages, treatment
-            categories, staff names, and follow-up rules. No CRM rebuild, no patient records,
-            just a clear operational dashboard.
+            I turn your current follow-up process into a small action system: stages,
+            next-action dates, overdue flags, value-at-risk, and simple message prompts.
+            Built in Google Sheets or Excel so staff can use it without changing CRM.
           </p>
         </div>
         <div class="service-actions">
-          <a class="primary-button" id="bookSetup" href="mailto:shuowenzhang1@gmail.com?subject=Clinic%20follow-up%20tracker%20setup&body=Hi%20Shuowen,%0A%0AI%20would%20like%20to%20discuss%20the%20GBP%2099%20clinic%20follow-up%20tracker%20setup.%0A%0AClinic%20name:%0AWebsite:%0AMain%20follow-up%20problem:%0A%0AThanks">Start by email</a>
-          <a class="secondary-button" href="mailto:shuowenzhang1@gmail.com?subject=Sample%20clinic%20follow-up%20tracker&body=Hi%20Shuowen,%0A%0ACan%20you%20send%20me%20the%20sample%20clinic%20follow-up%20tracker%3F%0A%0AThanks">Ask for sample tracker</a>
+          <a class="primary-button" id="bookSetup" href="mailto:shuowenzhang1@gmail.com?subject=GBP%2099%20starter%20recovery%20tracker&body=Hi%20Shuowen,%0A%0AI%20would%20like%20to%20discuss%20the%20GBP%2099%20starter%20recovery%20tracker.%0A%0AClinic%20name:%0AWebsite:%0AMain%20follow-up%20problem:%0ACurrent%20tool%20used%20for%20tracking:%0A%0AThanks">Start by email</a>
+          <a class="secondary-button" href="mailto:shuowenzhang1@gmail.com?subject=Sample%20clinic%20recovery%20tracker&body=Hi%20Shuowen,%0A%0ACan%20you%20send%20me%20the%20sample%20clinic%20recovery%20tracker%3F%0A%0AThanks">Ask for sample tracker</a>
         </div>
       </section>
     </main>
 
-    <script src="app.js?v=2"></script>
+    <script src="app.js?v=3"></script>
   </body>
 </html>

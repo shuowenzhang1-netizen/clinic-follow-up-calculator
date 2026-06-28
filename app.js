@@ -59,7 +59,7 @@ function calculate() {
 
 function buildSummary(result) {
   return [
-    "Clinic follow-up revenue leak estimate",
+    "Clinic follow-up recovery diagnosis",
     "",
     `New enquiries per month: ${numberFormatter.format(result.enquiries)}`,
     `Consultations booked: ${numberFormatter.format(result.consultations)}`,
@@ -68,7 +68,7 @@ function buildSummary(result) {
     `Possible missed repeat-booking revenue: ${formatter.format(result.lostRevenue)}`,
     `Conservative recoverable estimate with a simple tracker: ${formatter.format(result.recoverable)}`,
     "",
-    "Suggested next step: GBP 99 clinic follow-up tracker setup."
+    "Suggested next step: GBP 99 starter recovery tracker: daily queue, next-action dates, owners, overdue flags, value-at-risk, and message prompts."
   ].join("\n");
 }
 
@@ -82,7 +82,7 @@ function update() {
   output.missedRepeats.textContent = numberFormatter.format(result.missedRepeats);
   output.recoverable.textContent = formatter.format(result.recoverable);
 
-  const subject = encodeURIComponent("Clinic follow-up tracker estimate");
+  const subject = encodeURIComponent("Clinic follow-up recovery tracker diagnosis");
   const body = encodeURIComponent(`${summary}\n\nHi Shuowen,\n\nCan we discuss this setup?`);
   output.mailtoResult.href = `mailto:shuowenzhang1@gmail.com?subject=${subject}&body=${body}`;
 }
@@ -97,12 +97,12 @@ output.copySummary.addEventListener("click", async () => {
     await navigator.clipboard.writeText(summary);
     output.copySummary.textContent = "Copied";
     window.setTimeout(() => {
-      output.copySummary.textContent = "Copy summary";
+      output.copySummary.textContent = "Copy diagnosis";
     }, 1400);
   } catch {
     output.copySummary.textContent = "Copy unavailable";
     window.setTimeout(() => {
-      output.copySummary.textContent = "Copy summary";
+      output.copySummary.textContent = "Copy diagnosis";
     }, 1400);
   }
 });
